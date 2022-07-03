@@ -1974,7 +1974,7 @@ ul.minicart .cart-price .new {
 .live-match-time > span {
     display: block;
     max-width: 264px;
-    background: #e8a301;
+    background: #14b8d4;
     color: #fff;
     text-transform: uppercase;
     padding: 4px 20px;
@@ -1982,6 +1982,7 @@ ul.minicart .cart-price .new {
     font-weight: 700;
     letter-spacing: 2px;
     margin: 0 auto 80px;
+    border-radius: 20px;
 }
 .live-match-time .time {
     font-size: 70px;
@@ -5187,4 +5188,44 @@ ul.minicart .cart-price .new {
 	.coming-time{
 		width: 340% !important;
 	}
+}
+
+@media (max-width: 991px) {
+	
+	.disable{
+		display: none !important;
+
+	}
+	.rightgroup{
+		text-align: center !important;
+    	margin-left: 25px !important;
+    	margin-right: 25px !important;
+	}
+	.leftgroup{
+		text-align: center !important;
+    	margin-left: 25px !important;
+    	margin-right: 25px !important;
+	}
+	.live-match-team.right{
+		text-align: center;
+	}
+}
+
+.rightgroup{
+	background-color: #000;
+    border-radius: 20px 0 20px 0;
+    padding-top: 13px;
+    border-bottom: 5px solid #14b8d4;
+    border-left: 5px solid #14b8d4;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.leftgroup{
+	background-color: #000;
+    border-radius: 0px 20px 0px 20px;
+    padding-top: 13px;
+    border-bottom: 5px solid #14b8d4;
+    border-right: 5px solid #14b8d4;
+    margin-top: 20px;
 }
