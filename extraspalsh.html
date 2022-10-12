@@ -178,13 +178,13 @@
         <main>
 
             <!-- slider-area -->
-            <section class="third-banner-bg" style="background-image: url(img/images/technobots01.JPG);">
+            <section class="third-banner-bg" style="background-image: url(img/images/technobots05.JPG);">
                 <div class="container custom-container">
                     <div class="row">
                         <div class="col-12">
                             <div class="third-banner-img wow bounceInDown" data-wow-delay=".2s">
                             </div>
-                            <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Time On</h2>
+                            <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Start Time On Please Wait</h2>
                             <center>
                             <div id="app"></div>
                             <audio id="timeout_audio" autoplay></audio>
@@ -215,7 +215,7 @@
                 }
                 };
 
-                const TIME_LIMIT = 180;
+                const TIME_LIMIT = 15;
                 let timePassed = 0;
                 let timeLeft = TIME_LIMIT;
                 let timerInterval = null;
@@ -257,7 +257,7 @@
                 }
 
                 // Initialize timeout sound
-                timeoutAudio.src = "audio/count (1).wav";
+                timeoutAudio.src = "count (9).mp3";
                 timeoutAudio.load();
 
                 function startTimer() {
@@ -272,7 +272,7 @@
 
                     if (timeLeft === 0) {
                     onTimesUp();
-                    location.replace("index.html")
+                    location.replace("extracountdown.html")
                     }
                 }, 1000);
                 }
@@ -280,18 +280,17 @@
                 function formatTime(time) {
                 const minutes = Math.floor(time / 60);
                 let seconds = time % 60;
-
-
-
                 
-
                 if (seconds < 10) {
+                    
                 seconds = `0${seconds}`;
                 }
 
-                if(minutes==0 && seconds < 11){
-                        timeoutAudio.play()
-                    }
+                if(seconds < 4){
+
+                    timeoutAudio.play()
+
+                }
 
 
 
