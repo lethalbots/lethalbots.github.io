@@ -1,0 +1,384 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>L E T H A L B O T S</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/odometer.css">
+        <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <style>
+            .base-timer {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            align-items: center;
+            }
+
+            .base-timer__svg {
+            transform: scaleX(-1);
+            }
+
+            .base-timer__circle {
+            fill: none;
+            stroke: none;
+            align-items: center;
+            }
+
+            .base-timer__path-elapsed {
+            stroke-width: 7px;
+            stroke: rgb(255, 255, 255);
+            }
+
+            .base-timer__path-remaining {
+            stroke-width: 7px;
+            stroke-linecap: round;
+            transform: rotate(90deg);
+            transform-origin: center;
+            transition: 1s linear all;
+            fill-rule: nonzero;
+            stroke: currentColor;
+            align-items: center;
+            }
+
+            .base-timer__path-remaining.green {
+            color: #14b8d4;
+            }
+
+            .base-timer__path-remaining.orange {
+            color: orange;
+            }
+
+            .base-timer__path-remaining.red {
+            color: red;
+            }
+
+            .base-timer__label {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            align-items: center;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <!-- preloader -->
+        <div id="preloader">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <img src="img/icon/preloader.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- preloader-end -->
+
+        <!-- header-area -->
+        <header class="third-header-bg">
+            <div class="bg"></div>
+            <div class="container custom-container">
+                <div class="header-top-area t-header-top-area d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="header-top-social">
+                                <ul style="float: left;">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="header-top-social">
+                                <ul style="float: right;">
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="main-menu menu-style-two">
+                                <nav>
+                                    <div class="logo d-block d-lg-none">
+                                        <a href="index.html"><img src="img/logo/logo.png" style="width: 75%;" alt="Logo"></a>
+                                    </div>
+                                    <div class="navbar-wrap d-none d-lg-flex">
+                                        <ul class="left">
+                                            <li class="show"><a href="index.html">Home</a>
+                                            <li><a href="https://forms.gle/2yVkhBbb3ukUXVqKA" target="blank">Register</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="teams_for_the_battel.html">Battle Teams</a></li>
+                                        </ul>
+                                        <div class="logo">
+                                            <a href="index.html"><img src="img/logo/h3_logo.png" alt="Logo" style="width: 40%;margin-left: 29.7%;"></a>
+                                        </div>
+                                        <ul class="right">
+                                            <li><a href="rules.html">Rules</a>
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="mobile-menu-wrap d-block d-lg-none">
+                                <nav>
+                                    <div id="mobile-menu" class="navbar-wrap">
+                                        <ul>
+                                            <li class="show"><a href="index.html">Home</a>
+                                            <li><a href="https://forms.gle/2yVkhBbb3ukUXVqKA" target="blank">Register</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="teams_for_the_battel.html">Battle Teams</a></li>
+                                            <li><a href="rules.html">Rules</a>
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom-bg"></div>
+        </header>
+        <!-- header-area-end -->
+
+        <!-- main-area -->
+        <main>
+
+            <!-- slider-area -->
+            <section class="third-banner-bg" style="background-image: url(img/images/technobots05.JPG);">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="third-banner-img wow bounceInDown" data-wow-delay=".2s">
+                            </div>
+                            <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Start Time On Please Wait</h2>
+                            <center>
+                            <div id="app"></div>
+                            <audio id="timeout_audio" autoplay></audio>
+                            </center>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+            <!-- slider-area-end -->
+
+            <script>
+
+                const FULL_DASH_ARRAY = 283;
+                const WARNING_THRESHOLD = 10;
+                const ALERT_THRESHOLD = 5;
+
+                const COLOR_CODES = {
+                info: {
+                    color: "green"
+                },
+                warning: {
+                    color: "orange",
+                    threshold: WARNING_THRESHOLD
+                },
+                alert: {
+                    color: "red",
+                    threshold: ALERT_THRESHOLD
+                }
+                };
+
+                const TIME_LIMIT = 20;
+                let timePassed = 0;
+                let timeLeft = TIME_LIMIT;
+                let timerInterval = null;
+                let remainingPathColor = COLOR_CODES.info.color;
+
+                // Select timeout Audio element
+                const timeoutAudio = document.getElementById("timeout_audio");
+
+
+
+                document.getElementById("app").innerHTML = `
+                <div class="base-timer">
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g class="base-timer__circle">
+                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                    <path
+                        id="base-timer-path-remaining"
+                        stroke-dasharray="283"
+                        class="base-timer__path-remaining ${remainingPathColor}"
+                        d="
+                        M 50, 50
+                        m -45, 0
+                        a 45,45 0 1,0 90,0
+                        a 45,45 0 1,0 -90,0
+                        "
+                    ></path>
+                    </g>
+                </svg>
+                <span id="base-timer-label" class="base-timer__label">${formatTime(
+                    timeLeft
+                )}</span>
+                </div>
+                `;
+
+                startTimer();
+
+                function onTimesUp() {
+                clearInterval(timerInterval);
+                }
+
+                // Initialize timeout sound
+                timeoutAudio.src = "count (9).mp3";
+                timeoutAudio.load();
+
+                function startTimer() {
+                timerInterval = setInterval(() => {
+                    timePassed = timePassed += 1;
+                    timeLeft = TIME_LIMIT - timePassed;
+                    document.getElementById("base-timer-label").innerHTML = formatTime(
+                    timeLeft
+                    );
+                    setCircleDasharray();
+                    setRemainingPathColor(timeLeft);
+
+                    if (timeLeft === 0) {
+                    onTimesUp();
+                    location.replace("countdown.html")
+                    }
+                }, 1000);
+                }
+
+                function formatTime(time) {
+                const minutes = Math.floor(time / 60);
+                let seconds = time % 60;
+
+
+
+                
+
+                if (seconds < 10) {
+
+                if(seconds < 3){
+                    timeoutAudio.play();
+                }
+                seconds = `0${seconds}`;
+                }
+
+
+
+                return `${minutes}:${seconds}`;
+                }
+
+                function setRemainingPathColor(timeLeft) {
+                const { alert, warning, info } = COLOR_CODES;
+                if (timeLeft <= alert.threshold) {
+                    document
+                    .getElementById("base-timer-path-remaining")
+                    .classList.remove(warning.color);
+                    document
+                    .getElementById("base-timer-path-remaining")
+                    .classList.add(alert.color);
+                } else if (timeLeft <= warning.threshold) {
+                    document
+                    .getElementById("base-timer-path-remaining")
+                    .classList.remove(info.color);
+                    document
+                    .getElementById("base-timer-path-remaining")
+                    .classList.add(warning.color);
+                }
+                }
+
+                function calculateTimeFraction() {
+                const rawTimeFraction = timeLeft / TIME_LIMIT;
+                return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+                }
+
+                function setCircleDasharray() {
+                const circleDasharray = `${(
+                    calculateTimeFraction() * FULL_DASH_ARRAY
+                ).toFixed(0)} 283`;
+                document
+                    .getElementById("base-timer-path-remaining")
+                    .setAttribute("stroke-dasharray", circleDasharray);
+                }
+  
+            </script>
+
+        </main>
+        <!-- main-area-end -->
+
+        <!-- footer-area -->
+        <footer>
+            <div class="copyright-wrap third-copyright-wrap">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="copyright-text">
+                                <p>Copyright © 2022 All Rights Reserved.Design By <a href="https://www.shanrathsarana.com" target="blank">SR</a><a href="https://www.facebook.com/randika.nilupul/" target="blank"> - Randika</a> </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 d-none d-md-block">
+                            <div class="payment-method-img text-right">
+                                <img src="img/logo/FB_IMG_1647763993195.jpg" width="15%" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+
+		<!-- JS here -->
+        <script src="js/vendor/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.lettering.js"></script>
+        <script src="js/jquery.textillate.js"></script>
+        <script src="js/jquery.odometer.min.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+        
+        <script src="js/New folder/custom.js"></script>
+        <script src="js/New folder/grayscale.js"></script>
