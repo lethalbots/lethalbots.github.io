@@ -187,7 +187,6 @@
                             <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Starts In</h2>
                             <center>
                             <div id="app"></div>
-                            <audio id="timeout_audio" autoplay></audio>
                             </center>
                         </div>
                     </div>
@@ -221,8 +220,6 @@
                 let timerInterval = null;
                 let remainingPathColor = COLOR_CODES.info.color;
 
-                // Select timeout Audio element
-                const timeoutAudio = document.getElementById("timeout_audio");
 
 
 
@@ -256,9 +253,9 @@
                 clearInterval(timerInterval);
                 }
 
-                // Initialize timeout sound
-                timeoutAudio.src = "count (9).mp3";
-                timeoutAudio.load();
+                 // Initialize timeout sound
+                const audio = new Audio("audio/three-two-one-fight-deep-voice-38382.mp3");
+
 
                 function startTimer() {
                 timerInterval = setInterval(() => {
@@ -286,11 +283,10 @@
                 seconds = `0${seconds}`;
                 }
 
-                if(seconds < 4){
-
-                    timeoutAudio.play()
-
+                if(seconds < 5){
+                    audio.play();
                 }
+
 
 
 

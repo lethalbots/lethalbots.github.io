@@ -178,16 +178,15 @@
         <main>
 
             <!-- slider-area -->
-            <section class="third-banner-bg" style="background-image: url(img/images/technobots01.JPG);">
+            <section class="third-banner-bg" style="background-image: url(img/images/technobots05.JPG);">
                 <div class="container custom-container">
                     <div class="row">
                         <div class="col-12">
                             <div class="third-banner-img wow bounceInDown" data-wow-delay=".2s">
                             </div>
-                            <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Clock</h2>
+                            <h2 class="third-banner-content text-center wow bounceInUp" style="margin-top: 35px;">Battel Starts In</h2>
                             <center>
                             <div id="app"></div>
-                            <a href="extraready.html" class="btn rotated-btn"style="border-radius: 20px;">STOP</a>
                             </center>
                         </div>
                     </div>
@@ -198,8 +197,8 @@
             <script>
 
                 const FULL_DASH_ARRAY = 283;
-                const WARNING_THRESHOLD = 90;
-                const ALERT_THRESHOLD = 60;
+                const WARNING_THRESHOLD = 10;
+                const ALERT_THRESHOLD = 5;
 
                 const COLOR_CODES = {
                 info: {
@@ -215,11 +214,12 @@
                 }
                 };
 
-                const TIME_LIMIT = 180;
+                const TIME_LIMIT = 10;
                 let timePassed = 0;
                 let timeLeft = TIME_LIMIT;
                 let timerInterval = null;
                 let remainingPathColor = COLOR_CODES.info.color;
+
 
 
 
@@ -253,9 +253,9 @@
                 clearInterval(timerInterval);
                 }
 
-                // Initialize timeout sound
-                const audio1 = new Audio("audio/emergency-alarm-with-reverb-29431.mp3");
-                const audio2 = new Audio("audio/mixkit-female-microphone-countdown-341.wav");
+                 // Initialize timeout sound
+                const audio = new Audio("audio/emergency-alarm-with-reverb-29431.mp3");
+
 
                 function startTimer() {
                 timerInterval = setInterval(() => {
@@ -277,26 +277,16 @@
                 function formatTime(time) {
                 const minutes = Math.floor(time / 60);
                 let seconds = time % 60;
-
-
-
                 
-
                 if (seconds < 10) {
+                    
                 seconds = `0${seconds}`;
                 }
 
-                if(minutes==0 && seconds == 11){
-
-                    audio2.play();
-
+                if(seconds < 10){
+                    audio.play();
                 }
 
-                if(minutes==0 && seconds == 59){
-
-                    audio1.play();
-
-                    }
 
 
 
